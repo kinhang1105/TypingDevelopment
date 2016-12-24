@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/blue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="@string/app_name"/>
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:tint="@color/white"
+            android:src="@drawable/ic_navigation_more_vert"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svContent"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.leumas.typingdevelopment.widget.ChatBox
+                android:id="@+id/cbTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/general_10dp"
+            android:background="@color/white"
+            android:textColor="@color/text_color"
+            android:hint="@string/input_hint"
+            android:inputType="textFilter|textVisiblePassword|textNoSuggestions"
+            android:singleLine="true"
+            android:padding="@dimen/general_10dp" />
+        <ImageView
+            android:id="@+id/ivSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:layout_marginTop="@dimen/general_10dp"
+            android:layout_marginRight="@dimen/general_10dp"
+            android:layout_marginBottom="@dimen/general_10dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_hardware_keyboard_arrow_right"/>
+    </LinearLayout>
+
+
+</LinearLayout>
